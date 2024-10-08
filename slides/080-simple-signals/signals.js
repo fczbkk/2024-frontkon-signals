@@ -6,7 +6,7 @@ function runTask (task) {
   RUNNING_TASK = null;
 }
 
-export class Signal {
+export class State {
   constructor (initialValue) {
     this._dependencies = new Set();
     this._value = initialValue;

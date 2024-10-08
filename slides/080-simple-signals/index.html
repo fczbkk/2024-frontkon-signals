@@ -6,9 +6,9 @@
 </p>
 
 <script type="module">
-import { Signal, Computed, Effect } from './signals.js';
+import { State, Computed, Effect } from './signals.js';
 
-let counter = new Signal(0);
+let counter = new State(0);
 let triple = new Computed(() => counter.value * 3);
 let isTripleEven = new Computed(() => triple.value % 2 === 0);
 

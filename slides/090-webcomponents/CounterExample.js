@@ -1,4 +1,4 @@
-import { Signal, Computed, Effect } from './signals.js';
+import { State, Computed, Effect } from './signals.js';
 
 export class CounterExample extends HTMLElement {
   constructor() {
@@ -11,7 +11,7 @@ export class CounterExample extends HTMLElement {
       <p><button id="plusOneButton">+1</button></p>
     `
 
-    this.counter = new Signal(0);
+    this.counter = new State(0);
     this.triple = new Computed(() => this.counter.value * 3);
     this.isTripleEven = new Computed(() => this.triple.value % 2 === 0);
 
