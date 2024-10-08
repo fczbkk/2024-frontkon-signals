@@ -1,0 +1,25 @@
+<p>Count: <span id="count"></span></p>
+<p>Triple: <span id="triple"></span></p>
+<p>Is triple even: <span id="isTripleEven"></span></p>
+<p><button id="plusOneButton">+1</button></p>
+
+<script>
+let count = 0;
+let triple = count * 3
+let isTripleEven = triple % 2 === 0
+
+function updateValues () {
+  document.getElementById('count').innerHTML = count;
+  document.getElementById('triple').innerHTML = triple;
+  document.getElementById('isTripleEven').innerHTML = isTripleEven ? 'yes' : 'no';
+}
+
+document.getElementById('plusOneButton').addEventListener('click', () => {
+  count++;
+  triple = count * 3;
+  isTripleEven = triple % 2 === 0;
+  updateValues()
+})
+
+updateValues()
+</script>

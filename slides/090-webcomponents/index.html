@@ -1,0 +1,22 @@
+<h1>Default counter</h1>
+<counter-example></counter-example>
+
+<h1>Custom counter</h1>
+<counter-example initial-count="23" id="customCounter"></counter-example>
+
+<p>
+  Set count to:
+  <button>42</button>
+  <button>451</button>
+  <button>1984</button>
+</p>
+
+<script>
+document.querySelectorAll('button').forEach(button => {
+  button.addEventListener('click', () => {
+    document.getElementById('customCounter').setAttribute('initial-count', button.textContent)
+  })
+})
+</script>
+
+<script type="module" src="CounterExample.js"></script>
