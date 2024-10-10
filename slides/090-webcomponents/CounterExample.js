@@ -1,8 +1,7 @@
 import { State, Computed, Effect } from './signals.js';
 
 export class CounterExample extends HTMLElement {
-  constructor() {
-    super()
+  connectedCallback() {
     this.attachShadow({mode: 'open'})
     this.shadowRoot.innerHTML = `
       <p>Count: <span id="count"></span></p>
